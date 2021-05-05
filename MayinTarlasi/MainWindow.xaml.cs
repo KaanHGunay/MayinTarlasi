@@ -122,14 +122,12 @@ namespace MayinTarlasi
 
             if ((bool)tiklanan.Tag)
             {
-                //tiklanan.Background = Brushes.Red;
                 btnResimEkle(tiklanan, "mayin");
                 if (clsMT.ses) clsMT.sesBomba.Play();
                 oyunBitir();
             }
             else
             {
-                //tiklanan.Background = Brushes.Green;
                 if (clsMT.ilkTiklamaMi) clsMT.ilkTiklamaMi = false;
                 clsMT.skor += clsMT.mayinPuan;
                 lblSkor.Content = "Skor: " + clsMT.skor.ToString();
@@ -162,12 +160,7 @@ namespace MayinTarlasi
             {
                 if ((bool)item.Tag)
                 {
-                    //item.Background = Brushes.LightBlue;
                     btnResimEkle(item, "mayin");
-                }
-                else
-                {
-                    //item.Background = Brushes.LightBlue;
                 }
             }
             
@@ -224,7 +217,7 @@ namespace MayinTarlasi
             int index = MayinAlani.Children.IndexOf(btn);
             if (cevreMayinSay(btn) == 0)
             {
-                if (clsMT.ustVarmi(index) && clsMT.soluVarmi(index) && !(bool)(((Button)MayinAlani.Children[index - clsMT.verilenboyut - 1]).Tag) && MayinAlani.Children[index - clsMT.verilenboyut - 1].IsEnabled)
+                if (clsMT.ustVarmi(index) && clsMT.soluVarmi(index) && !(bool)((Button)MayinAlani.Children[index - clsMT.verilenboyut - 1]).Tag && MayinAlani.Children[index - clsMT.verilenboyut - 1].IsEnabled)
                 {
                     Btn_Click(MayinAlani.Children[index - clsMT.verilenboyut - 1], null);
                 }
@@ -232,27 +225,27 @@ namespace MayinTarlasi
                 {
                     Btn_Click(MayinAlani.Children[index - clsMT.verilenboyut], null);
                 }
-                if (clsMT.ustVarmi(index) && clsMT.sagiVarmi(index) && !(bool)(((Button)MayinAlani.Children[index - clsMT.verilenboyut + 1]).Tag) && MayinAlani.Children[index - clsMT.verilenboyut + 1].IsEnabled)
+                if (clsMT.ustVarmi(index) && clsMT.sagiVarmi(index) && !(bool)((Button)MayinAlani.Children[index - clsMT.verilenboyut + 1]).Tag && MayinAlani.Children[index - clsMT.verilenboyut + 1].IsEnabled)
                 {
                     Btn_Click(MayinAlani.Children[index - clsMT.verilenboyut + 1], null);
                 }
-                if (clsMT.soluVarmi(index) && !(bool)(((Button)MayinAlani.Children[index - 1]).Tag) && MayinAlani.Children[index - 1].IsEnabled)
+                if (clsMT.soluVarmi(index) && !(bool)((Button)MayinAlani.Children[index - 1]).Tag && MayinAlani.Children[index - 1].IsEnabled)
                 {
                     Btn_Click(MayinAlani.Children[index - 1], null);
                 }
-                if (clsMT.sagiVarmi(index) && !(bool)(((Button)MayinAlani.Children[index + 1]).Tag) && MayinAlani.Children[index + 1].IsEnabled)
+                if (clsMT.sagiVarmi(index) && !(bool)((Button)MayinAlani.Children[index + 1]).Tag && MayinAlani.Children[index + 1].IsEnabled)
                 {
                     Btn_Click(MayinAlani.Children[index + 1], null);
                 }
-                if (clsMT.altVarmi(index) && clsMT.soluVarmi(index) && !(bool)(((Button)MayinAlani.Children[index + clsMT.verilenboyut - 1]).Tag) && MayinAlani.Children[index + clsMT.verilenboyut - 1].IsEnabled)
+                if (clsMT.altVarmi(index) && clsMT.soluVarmi(index) && !(bool)((Button)MayinAlani.Children[index + clsMT.verilenboyut - 1]).Tag && MayinAlani.Children[index + clsMT.verilenboyut - 1].IsEnabled)
                 {
                     Btn_Click(MayinAlani.Children[index + clsMT.verilenboyut - 1], null);
                 }
-                if (clsMT.altVarmi(index) && !(bool)(((Button)MayinAlani.Children[index + clsMT.verilenboyut]).Tag) && MayinAlani.Children[index + clsMT.verilenboyut].IsEnabled)
+                if (clsMT.altVarmi(index) && !(bool)((Button)MayinAlani.Children[index + clsMT.verilenboyut]).Tag && MayinAlani.Children[index + clsMT.verilenboyut].IsEnabled)
                 {
                     Btn_Click(MayinAlani.Children[index + clsMT.verilenboyut], null);
                 }
-                if (clsMT.altVarmi(index) && clsMT.sagiVarmi(index) && !(bool)(((Button)MayinAlani.Children[index + clsMT.verilenboyut + 1]).Tag) && MayinAlani.Children[index + clsMT.verilenboyut + 1].IsEnabled)
+                if (clsMT.altVarmi(index) && clsMT.sagiVarmi(index) && !(bool)((Button)MayinAlani.Children[index + clsMT.verilenboyut + 1]).Tag && MayinAlani.Children[index + clsMT.verilenboyut + 1].IsEnabled)
                 {
                     Btn_Click(MayinAlani.Children[index + clsMT.verilenboyut + 1], null);
                 }
